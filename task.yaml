@@ -3,4 +3,5 @@ steps:
   - build: .
     image: 978a92daa2ad4447aae1b21196dd4a9b.azurecr.io/reco_clean:latest
     dockerfile: Dockerfile
+  - push: 978a92daa2ad4447aae1b21196dd4a9b.azurecr.io/reco_clean:latest
   - cmd: 978a92daa2ad4447aae1b21196dd4a9b.azurecr.io/reco_clean:latest
