@@ -1,8 +1,10 @@
 version: v1.1.0
 steps:
-  - build: .
-    image: 978a92daa2ad4447aae1b21196dd4a9b.azurecr.io/reco_clean:latest
+  - id: build-step
+    build: - -t 978a92daa2ad4447db4a9b2.azurecr.io/reco_clean:latest .
     dockerfile: Dockerfile
-  - push:
-      - 978a92daa2ad4447aae1b21196dd4a9b.azurecr.io/reco_clean:latest
-  - cmd: 978a92daa2ad4447aae1b21196dd4a9b.azurecr.io/reco_clean:latest
+  - id: push-step
+    push:
+      - 978a92daa2ad4447db4a9b2.azurecr.io/reco_clean:latest
+  - id: cmd-step
+    cmd: 978a92daa2ad4447db4a9b2.azurecr.io/reco_clean:latest
